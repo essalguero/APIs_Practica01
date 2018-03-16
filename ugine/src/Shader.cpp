@@ -4,11 +4,6 @@
 
 #include <string>
 
-Shader::Shader()
-{
-}
-
-
 Shader::~Shader()
 {
 	if (id != -1)
@@ -73,8 +68,6 @@ Shader::Shader(string vertexShaderSource, string fragmentShaderSource) : error{}
 
 
 	vposLoc = glGetAttribLocation(id, "vpos");
-	vcolorLoc = glGetAttribLocation(id, "vcolor");
-
 	mvpMatrix = glGetUniformLocation(id, "mvpMatrix");
 
 }
@@ -89,7 +82,6 @@ void Shader::setupAttribs() const {
 
 
 	glVertexAttribPointer(vposLoc, 3, GL_FLOAT, false, sizeof(Vertex), 0);
-	//glVertexAttribPointer(vcolorLoc, 3, GL_FLOAT, false, sizeof(float) * 6, reinterpret_cast<void*>(sizeof(float) * 3));
 }
 
 

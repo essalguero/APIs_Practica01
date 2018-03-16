@@ -140,13 +140,6 @@ int main(int, char**) {
 
 		glm::mat4 mvpMatrix;
 		int matrixLocation = shaderProgram.getLocation("mvpMatrix");
-		
-		//mvpMatrix[3][3] = 6;
-
-		//glm::mat4 matP = glm::perspective(glm::half_pi<float>(), screenWidth / (float)screenHeight, 0.1f, 100.0f);
-		//glm::mat4 matV = glm::lookAt(glm::vec3(0.0f, 0.0f, 6.0f), glm::vec3(), glm::vec3(0.0f, 1.0f, 0.0f));
-
-		//glm::mat4 matVP = matP*matV;
 
 
 		// Crear matriz de proyeccion
