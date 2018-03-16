@@ -1,15 +1,6 @@
 #include "Buffer.h"
 
 
-
-
-
-
-Buffer::Buffer() {
-
-}
-
-
 Buffer::~Buffer() {
 	glDeleteBuffers(2, buffer);
 }

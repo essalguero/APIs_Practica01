@@ -12,7 +12,7 @@ Shader::~Shader()
 }
 
 // Gets as parameter the code of the shaders to compile
-Shader::Shader(string vertexShaderSource, string fragmentShaderSource) : error{} {
+Shader::Shader(string const & vertexShaderSource, const string & fragmentShaderSource) : error{} {
 	
 	int retCode = GL_FALSE;
 
@@ -74,14 +74,10 @@ Shader::Shader(string vertexShaderSource, string fragmentShaderSource) : error{}
 
 
 void Shader::setupAttribs() const {
-	if (vposLoc != -1) 
+	if (vposLoc != -1) {
 		glEnableVertexAttribArray(vposLoc);
-
-	if (vcolorLoc != -1)
-		glEnableVertexAttribArray(vcolorLoc);
-
-
-	glVertexAttribPointer(vposLoc, 3, GL_FLOAT, false, sizeof(Vertex), 0);
+		glVertexAttribPointer(vposLoc, 3, GL_FLOAT, false, sizeof(Vertex), 0);
+	}
 }
 
 

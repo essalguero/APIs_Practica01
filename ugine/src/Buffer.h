@@ -13,7 +13,6 @@ using namespace glm;
 class Buffer
 {
 public:
-	Buffer();
 
 	Buffer(const std::vector<Vertex>& vertices, const std::vector<uint16_t>& indices) : vertices(vertices), indices(indices) {
 		
@@ -33,9 +32,6 @@ public:
 		// Rellenar los buffers de datos. Tienen que estan enlazados previamente
 		glBufferData(GL_ARRAY_BUFFER, vsize, vertices.data(), GL_STATIC_DRAW);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, isize, indices.data(), GL_STATIC_DRAW);
-
-		
-
 
 	};
 

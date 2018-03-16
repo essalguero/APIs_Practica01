@@ -18,14 +18,6 @@
 
 #define FULLSCREEN false
 
-glm::mat4 generateLookAtMatrix();
-
-/*std::array<float, 18> vertices = {
-	// coords	// colors
-	 0,  1, 0,		1, 0, 0,
-	-1, -1, 0,  	0, 1, 0,
-	 1, -1, 0,		0, 0, 1
-};*/
 
 std::string readString(const char* filename) {
 	std::ifstream f(filename, std::ios_base::binary);

@@ -10,7 +10,7 @@ using namespace std;
 class Shader
 {
 public:
-	Shader(string stringVertexShader, string stringFragmentShader);
+	Shader(const string & stringVertexShader, const string & stringFragmentShader);
 
 	~Shader();
 
@@ -47,7 +47,6 @@ private:
 	char error[1024];
 
 	int vposLoc;
-	int vcolorLoc;
 
 	int mvpMatrix;
 };
